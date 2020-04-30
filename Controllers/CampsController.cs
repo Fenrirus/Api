@@ -109,7 +109,7 @@ namespace CoreCodeCamp.Controllers
                     return BadRequest("Moniker in use");
                 }
 
-                var link = _linkGenerator.GetPathByAction("Get", "Camps", new { moniker = model.Moniker });
+                var link = _linkGenerator.GetPathByAction("Get10", "Camps", new { moniker = model.Moniker });
                 if (string.IsNullOrWhiteSpace(link))
                 {
                     return BadRequest("Could not use this moniker");
